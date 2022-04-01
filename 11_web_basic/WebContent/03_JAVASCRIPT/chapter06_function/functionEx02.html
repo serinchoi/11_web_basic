@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수의 생명주기</title>
+<script>
+
+	var globalData = "전역";     // 스크립트의 전역변수
+
+	function func1(){
+		
+		var func1Data = "함수1"; // 함수 1의 지역변수
+		
+		document.write(globalData + "<br>");
+		document.write(func1Data + "<br>");
+		//document.write(func2Data + "<br>");
+		document.write("<hr>");
+	}
+	
+	function func2(){
+		
+		var func2Data = "함수2"; // 함수 2의 지역변수
+		
+		document.write(globalData + "<br>");
+		//document.write(func1Data + "<br>");
+		document.write(func2Data + "<br>");
+		document.write("<hr>");
+	}
+	
+	func1();
+	func2();
+	
+	document.write(globalData + "<br>");
+	document.write(func1Data + "<br>");
+	document.write(func2Data + "<br>");
+	document.write("<hr>");
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
